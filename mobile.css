@@ -1,0 +1,235 @@
+/* overarching, inherited styles */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: montserrat, sans-serif;
+}
+
+/* generic style to mimic Bootstrap -- only use bottom margins */
+* {
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+/* headers only change size */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+.jumbotron {
+  min-height: 30em;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0;
+}
+.image-separator {
+  min-height: 25em;
+  background-repeat: no-repeat;
+  background-color: aqua;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#codeVisual {
+  background-color: tan;
+  flex: 1 0 0;
+  width: calc(100% - 2em);
+  max-height: 30em;
+  max-width: 50em;
+  margin: 0 auto;
+  margin-top: 1em;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.codeVisualButton {
+  height: 1em;
+  width: 1em;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  top: 1em;
+}
+
+#button1 {
+  right: 1em;
+  background-color: red;
+}
+
+#button2 {
+  right: 2.5em;
+  background-color: yellow;
+}
+
+#button3 {
+  right: 4em;
+  background-color: lightgreen;
+}
+
+#codeVisualTerminal {
+  height: calc(100% - 3em);
+  width: 100%;
+  position: absolute;
+  top: 3em;
+  background-color: darkslategrey;
+}
+
+.container {
+  width: 100%;
+  max-width: 64em;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.code {
+  font-family: monospace;
+}
+
+.text-light {
+  color: whitesmoke;
+}
+
+#codeVisualBash {
+  padding: 0.5em;
+  font-size: 1.25em;
+}
+
+.text-blue {
+  color: skyblue;
+}
+
+.text-green {
+  color: greenyellow;
+}
+
+#codeVisualBash * {
+  float: left;
+}
+
+.display-block {
+  display: block;
+}
+
+.text-secondary {
+  color: darkslategray;
+}
+
+#codeVisualCursor.blinking {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% { color: inherit; }
+  49% { color: inherit; }
+  50% { color: transparent; }
+  99% { color: transparent; }
+  100% { color: inherit; }
+}
+
+.card {
+  box-shadow: 0 0 1px 0 darkslategrey;
+  display: flex;
+  flex-direction: column;
+}
+.card-header {
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+.projectCard {
+  flex: 0 0 33%;
+  padding: 1em;
+}
+.projectCard .card img {
+  max-width: 10em;
+  display: block;
+  margin: 1em auto;
+}
+.projectCard .card div {
+  padding: 1em;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-header {
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  border-bottom: 2px solid lightgray;
+}
+
+tr:nth-child(2n) {
+  background-color: whitesmoke;
+}
+
+th, td {
+  padding: 0.5em 1em;
+}
+tbody > tr {
+  border-top: 1px solid lightgray;
+}
+
+th {
+  text-align: left;
+}
+
+#nav-bar {
+  text-align: right;
+  padding: 1em;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+#nav-bar a {
+  color: black;
+  text-decoration: none;
+  padding: 0 0.5em 0.5em 0.5em;
+}
+#nav-bar a:hover {
+  border-bottom: 5px solid lightgrey;
+}
+
+#main-jumbotron {
+  justify-content: center;
+}
+#main-jumbotron h1 {
+  font-size: 3em;
+}
+
+#copyright-notice {
+  margin-top: auto;
+}
+
+hr {
+  background-color: lightgray;
+  margin: 3em 30%;
+  height: 1px;
+  border: none;
+}
+
+a {
+  color: dodgerblue;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
