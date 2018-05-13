@@ -1,2 +1,4 @@
-body {
+.jumbotron {
+  /* indicate desktop version */
+  background-color: white;
 }

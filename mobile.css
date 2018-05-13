@@ -279,6 +279,9 @@ p, li {
   position: relative;
   background-color: white;
   z-index: 1;
+  
+  /* indicate that screen is mobile */
+  background-color: lightgray;
 }
 
 .video-placeholder {
