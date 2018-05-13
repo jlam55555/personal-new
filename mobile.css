@@ -240,9 +240,6 @@ p, li {
   position: relative;
   background-color: white;
   z-index: 1;
-  
-  /* indicate that screen is mobile */
-  background-color: lightgray;
 }
 
 .video-placeholder {
@@ -264,9 +261,9 @@ p, li {
   color: transparent;
   content: 's';
 }
-.mobile-scroll > :first-child {
+.mobile-scroll:not(#technologies) > :first-child {
   margin-left: 10%;
 }
-.mobile-scroll > :last-child {
+.mobile-scroll:not(#technologies) > :last-child {
   margin-right: 10%;
 }
