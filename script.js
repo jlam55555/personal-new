@@ -27,8 +27,8 @@ let resizeHandler = () => {
     videoPlaceholder.style.height = window.innerHeight + 'px';
     videoSeparator.style.minHeight = window.innerHeight + 'px';
     videoSeparator.style.minWidth = window.innerWidth + 'px';
-    videoSeparator.style.marginLeft = (window.innerWidth - videoSeparator.offsetWidth) / 2 + 'px';
   }
+  videoSeparator.style.marginLeft = (window.innerWidth - videoSeparator.offsetWidth) / 2 + 'px';
 };
 resizeHandler();
 window.addEventListener('resize', resizeHandler);
