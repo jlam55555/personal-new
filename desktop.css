@@ -2,3 +2,69 @@
   /* indicate desktop version */
   background-color: white;
 }
+
+#codeVisual {
+  background-color: tan;
+  flex: 1 0 0;
+  width: calc(100% - 2em);
+  max-height: 30em;
+  max-width: 50em;
+  margin: 0 auto;
+  margin-top: 1em;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+}
+.codeVisualButton {
+  height: 1em;
+  width: 1em;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  top: 1em;
+}
+#button1 {
+  right: 1em;
+  background-color: red;
+}
+
+#button2 {
+  right: 2.5em;
+  background-color: yellow;
+}
+
+#button3 {
+  right: 4em;
+  background-color: lightgreen;
+}
+#codeVisualTerminal {
+  height: calc(100% - 3em);
+  position: absolute;
+  top: 3em;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+}
+
+#main-jumbotron h1 {
+  font-size: 3em;
+}
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: initial;
+}
+
+.mobile-scroll {
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+.mobile-scroll > :first-child, .mobile-scroll > :last-child {
+  margin: 0;
+}
+
+.project-card {
+  flex: 0 0 33%;
+}

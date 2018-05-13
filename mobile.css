@@ -36,49 +36,17 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
-#codeVisual {
-  background-color: tan;
-  flex: 1 0 0;
-  width: calc(100% - 2em);
-  max-height: 30em;
-  max-width: 50em;
-  margin: 0 auto;
-  margin-top: 1em;
-  border-radius: 1em;
-  position: relative;
-  overflow: hidden;
-}
-
-.codeVisualButton {
-  height: 1em;
-  width: 1em;
-  background-color: black;
-  border-radius: 100%;
-  position: absolute;
-  top: 1em;
-}
-
-#button1 {
-  right: 1em;
-  background-color: red;
-}
-
-#button2 {
-  right: 2.5em;
-  background-color: yellow;
-}
-
-#button3 {
-  right: 4em;
-  background-color: lightgreen;
-}
-
 #codeVisualTerminal {
-  height: calc(100% - 3em);
-  width: 100%;
-  position: absolute;
-  top: 3em;
+  width: calc(100% - 2em);
+  max-width: 25em;
+  margin: 0 auto;
+  border-radius: 0.25em;
   background-color: darkslategrey;
+}
+#codeVisualBash {
+  height: 2em;
+  padding: 0.5em;
+  font-size: 1.25em;
 }
 
 .container {
@@ -100,10 +68,6 @@ h1, h2, h3, h4, h5, h6 {
   color: whitesmoke;
 }
 
-#codeVisualBash {
-  padding: 0.5em;
-  font-size: 1.25em;
-}
 
 .text-blue {
   color: skyblue;
@@ -149,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-card {
-  flex: 0 0 33%;
+  flex: 0 0 80%;
   padding: 1em;
 }
 .project-card .card img {
@@ -210,9 +174,6 @@ th {
 
 #main-jumbotron {
   justify-content: center;
-}
-#main-jumbotron h1 {
-  font-size: 3em;
 }
 
 #copyright-notice {
@@ -286,4 +247,26 @@ p, li {
 
 .video-placeholder {
   background-color: transparent;
+}
+
+
+.desktop {
+  display: none;
+}
+
+.mobile-scroll {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.mobile-scroll::after {
+  height: 0;
+  width: 0;
+  color: transparent;
+  content: 's';
+}
+.mobile-scroll > :first-child {
+  margin-left: 10%;
+}
+.mobile-scroll > :last-child {
+  margin-right: 10%;
 }
