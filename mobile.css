@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   padding: 3em 0;
 }
-.image-separator {
+.image-separator, .video-placeholder {
   display: block;
   width: 100%;
   min-height: 50em;
@@ -281,6 +281,6 @@ p, li {
   z-index: 1;
 }
 
-.image-separator.placeholder {
+.video-placeholder {
   background-color: transparent;
 }
