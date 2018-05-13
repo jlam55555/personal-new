@@ -10,6 +10,7 @@
     <link rel='stylesheet' href='./mobile.css'>
     <link rel='stylesheet' href='./desktop.css' media='screen and (min-width: 1024px)'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css' integrity='sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp' crossorigin='anonymous'>
     <script src='./script.js' defer></script>
   </head>
   <body>
@@ -22,7 +23,11 @@
     <div class='jumbotron' id='main-jumbotron'>
       <div class='container'>
         <h1 class='text-center'>Hi. I'm Jonathan Lam.</h1>
-        <h3 class='text-center'>Nice to meet you.</h3>
+        <h3 class='text-center'>
+          Nice to meet you.
+          <a href='./resume.html'>Résumé</a>.
+          <a href='#contact'>Contact</a>.
+        </h3>
       </div>
       <div id='codeVisual'>
         <div class='codeVisualButton' id='button1'></div>
@@ -39,72 +44,180 @@
         </div>
       </div>
     </div>
-    <div class='image-separator' data-src='https://hdwallsource.com/img/2015/8/simple-pattern-wallpaper-45186-46380-hd-wallpapers.jpg'></div>
+    <div class='image-separator' data-src='./assets/oculus.jpg'></div>
     <div class='jumbotron' id='about'>
       <div class='container'>
         <h1>About</h1>
-        <p>I'm currently a senior in high school, entering <a href='http://cooper.edu/welcome' target='_blank'>the Cooper Union</a> as a freshman next year. While I will be studying EE, my passion is in computer science and programming applications that will ease the life of workers, students, and other programmers.</p>
+        <p>I'm currently a senior in high school, entering <a href='http://cooper.edu/welcome' target='_blank'>the Cooper Union</a> as a freshman next year. While I will be studying electrical engineering, my <mark>passion is creating applications that will ease the life of workers, students, and other programmers</mark>. I hope that a college education in EE will allow me to get a fundamental idea of how computers work, while learning the theoretical side of computer science on my own.</p>
+        <p>I enjoy spending free time bowling, Rubik's cubing, doing origami, listening to Studio Ghibli music, answering questions on <a href='https://www.stackoverflow.com/users/2397327/jonathan-lam'>Stack Overflow</a>, trying to solve problems on Project Euler or <a href='https://www.codewars.com/users/jlam55555' target='_blank'>Code Wars</a>, and learning new languages. I also maintain a <a href='http://eis.jonathanlam.tech' target='_blank'>literary and programming blog</a>.</p>
+        <hr>
+        <h3>Programming Timeline</h3>
+        <ul>
+          <li>LIHacks 2016: Winner of the Most Entreneurial Prize for <a href='http://www.jonathanlam.tech/ringtune-website' target='_blank'>RingTune</a>.</li>
+          <li>Recipient of the University of Rochester Xerox Award for Innovation and Information Technology.</li>
+          <li>MoMath Hackathon 2017: Winner of the Dynamic Wall Challenge, finalist for the Math Square Challenge, and recipient of the Wolfram Award, for <a href='https://www.github.com/poobaloofa/howitfeelstochew5gum' target='_blank'>assorted projects</a>.</li>
+          <li>StuyHacks MLH LHD 2017: Best Game for <a href='http://www.fruitsensei.tech'>FruitSensei</a>.</li>
+          <li>Recipient of the Weller Foundation Computer Science/Technology Scholarship.</li>
+          <li>Safe Rides of Redding and Easton officially supports the website <a href='https://www.saferideser9.org' target='_blank'>saferideser9.org</a> for facilitation of the service.</li>
+        </ul>
       </div>
     </div>
-    <div class='image-separator' data-src='https://hdwallsource.com/img/2015/8/simple-pattern-wallpaper-45186-46380-hd-wallpapers.jpg'></div>
+    <div class='image-separator' data-src='./assets/workspace.jpg'></div>
     <div class='jumbotron' id='experience'>
       <div class='container'>
         <h1>Experience</h1>
         <h3>Projects</h3>
         <div class='row'>
-          <div class='projectCard'>
-            <div class='card'>
+          <div class='project-card'>
+            <a class='card' href='http://eis.jonathanlam.tech' target='_blank'>
               <div class='card-header'>
                 <img src='https://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png'>
               </div>
-              <div class='text-center'>Everything is Sheep</div>
-            </div>
+              <div class='text-center card-body'>Everything is Sheep</div>
+            </a>
           </div>
-          <div class='projectCard'>
-            <div class='card'>
+          <div class='project-card'>
+            <a class='card' href='https://www.saferideser9.org' target='_blank'>
               <div class='card-header'>
                 <img src='https://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png'>
               </div>
-              <div class='text-center'>Safe Rides of ER9</div>
-            </div>
+              <div class='text-center card-body'>Safe Rides of ER9</div>
+            </a>
           </div>
-          <div class='projectCard'>
-            <div class='card'>
+          <div class='project-card'>
+            <a class='card' href='http://www.thehomeworklife.co.nf' target='_blank'>
               <div class='card-header'>
                 <img src='https://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png'>
               </div>
-              <div class='text-center'>The Homework Life</div>
-            </div>
+              <div class='text-center card-body'>The Homework Life</div>
+            </a>
           </div>
-          <div class='projectCard'>
-            <div class='card'>
+          <div class='project-card'>
+            <a class='card' href='http://www.fruitsensei.tech' target='_blank'>
               <div class='card-header'>
                 <img src='https://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png'>
               </div>
-              <div class='text-center'>Fruit Sensei</div>
-            </div>
+              <div class='text-center card-body'>Fruit Sensei</div>
+            </a>
           </div>
-          <div class='projectCard'>
-            <div class='card'>
+          <div class='project-card'>
+            <a class='card' href='http://www.jonathanlam.tech/ringtune-website' target='_blank'>
               <div class='card-header'>
                 <img src='https://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png'>
               </div>
-              <div class='text-center'>RingTune</div>
-            </div>
+              <div class='text-center card-body'>RingTune</div>
+            </a>
           </div>
-          <div class='projectCard'>
-            <div class='card'>
+          <div class='project-card'>
+            <a class='card' href='http://jbhsbowling.github.io' target='_blank'>
               <div class='card-header'>
                 <img src='https://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png'>
               </div>
-              <div class='text-center'>Barlow Bowling</div>
-            </div>
+              <div class='text-center card-body'>Barlow Bowling</div>
+            </a>
           </div>
         </div>
+        <br>
+        <p class='text-center'>See more on my <a href='https://www.github.com/jlam55555/' target='_blank'>Github</a>.</p>
         <hr>
         <h3>Technologies</h3>
-        <div>
-          <p>Working here...</p>
+        <div class='row'>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fab fa-fw fa-js-square'></i>
+              </div>
+              <div class='card-body'>JavaScript</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fab fa-fw fa-node-js'></i>
+              </div>
+              <div class='card-body'>Node.JS</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fas fa-fw fa-code'></i>
+              </div>
+              <div class='card-body'>jQuery</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fab fa-fw fa-angular'></i>
+              </div>
+              <div class='card-body'>Angular</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fas fa-fw fa-code'></i>
+              </div>
+              <div class='card-body'>Aurelia</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fab fa-fw fa-html5'></i>
+              </div>
+              <div class='card-body'>HTML5</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fab fa-fw fa-css3'></i>
+              </div>
+              <div class='card-body'>CSS3</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fab fa-fw fa-php'></i>
+              </div>
+              <div class='card-body'>PHP</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fas fa-fw fa-code'></i>
+              </div>
+              <div class='card-body'>SQL</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fab fa-fw fa-java'></i>
+              </div>
+              <div class='card-body'>Java</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fas fa-fw fa-code'></i>
+              </div>
+              <div class='card-body'>C</div>
+            </div>
+          </div>
+          <div class='technology-card'>
+            <div class='card'>
+              <div class='card-header'>
+                <i class='fas fa-fw fa-code'></i>
+              </div>
+              <div class='card-body'>C++</div>
+            </div>
+          </div>
         </div>
         <hr>
         <h3>Preferences</h3>
@@ -137,17 +250,27 @@
                 <td>Indenting</td>
                 <td>spaces (2)</td>
               </tr>
+              <tr>
+                <td>Code Style</td>
+                <td><a href='https%3A%2F%2Fgithub.com%2Fmrdoob%2Fthree.js%2Fwiki%2FMr.doob%27s-Code-Style%25E2%2584%25A2' target='_blank'>Mr.doob</a></td>
+              </tr>
+              <tr>
+                <td>Code Philosophy</td>
+                <td><a href='https://www.ampproject.org/about/amp-design-principles/' target='_blank'>AMP Design Principles</a></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
-    <div class='image-separator' data-src='https://hdwallsource.com/img/2015/8/simple-pattern-wallpaper-45186-46380-hd-wallpapers.jpg'></div>
+    <video class='video-separator' autoplay loop poster='./assets/cube.jpg'>
+      <source src='./assets/cube.mp4' type='video/mp4' />
+    </video>
     <div class='jumbotron' id='contact'>
       <div class='container'>
         <h1>Contact</h1>
         <p>Interested in my work? Contact me at <a href='mailto:jonathanlamdev@gmail.com' target='_blank'>jonathanlamdev@gmail.com</a>.</p>
-        <p>See my <a href='./resume.html' target='_blank'>resume</a>.</p>
+        <p>Interested in hiring me? See my <a href='./resume.html' target='_blank'>résumé</a>.</p>
       </div>
       <small class='display-block text-secondary text-center' id='copyright-notice'>Copyright &copy; 2018 Jonathan Lam.</small>
     </div>

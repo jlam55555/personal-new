@@ -13,7 +13,7 @@ let imageSeparators = document.querySelectorAll('.image-separator');
 });
 
 // dynamic terminal
-let actions = ['brother', 'math', 'run', 'blog', 'code', 'build', 'cube', 'bowl', 'teach', 'learn', 'hack'];
+let actions = ['brother', 'math', 'run', 'blog', 'code', 'build', 'cube', 'bowl', 'teach', 'learn', 'hack', 'eat', 'sleep', 'design'];
 let actionsIndex = Math.floor(Math.random() * actions.length);
 let wordIndex = 0;
 let increasing = true;
