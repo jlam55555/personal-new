@@ -12,7 +12,7 @@ let videoPlaceholder = document.querySelector('.video-placeholder');
 let resizeHandler = () => {
   firstJumbotron.style.height = window.innerHeight + 'px';
   [].forEach.call(imageSeparators, imageSeparator => {
-    imageSeparator.style.backgroundSize = `${window.innerWidth}px auto`;
+    imageSeparator.style.backgroundSize = `auto ${window.innerHeight}px`;
     imageSeparator.style.height = window.innerHeight + 'px';
   });
   videoPlaceholder.style.height = window.innerHeight + 'px';
