@@ -1,16 +1,26 @@
-// set size of first jumbotron to window height (and resize when window resized)
-let firstJumbotron = document.querySelector('#main-jumbotron');
-let resizeHandler = () => {
-  firstJumbotron.style.height = window.innerHeight + 'px';
-};
-resizeHandler();
-window.addEventListener('resize', resizeHandler);
-
 // images for image separators
 let imageSeparators = document.querySelectorAll('.image-separator');
 [].forEach.call(imageSeparators, imageSeparator => {
   imageSeparator.style.backgroundImage = `url('${imageSeparator.dataset.src}')`;
 });
+
+// set size of first jumbotron to window height (and resize when window resized)
+// resize image separators
+let firstJumbotron = document.querySelector('#main-jumbotron');
+let videoSeparator = document.querySelector('.video-separator');
+let videoPlaceholder = document.querySelector('.video-placeholder');
+let resizeHandler = () => {
+  firstJumbotron.style.height = window.innerHeight + 'px';
+  [].forEach.call(imageSeparators, imageSeparator => {
+    imageSeparator.style.height = window.innerHeight + 'px';
+  });
+  videoPlaceholder.style.height = window.innerHeight + 'px';
+  videoSeparator.style.minHeight = window.innerHeight + 'px';
+  videoSeparator.style.minWidth = window.innerWidth + 'px';
+  videoSeparator.style.marginLeft = (window.innerWidth - videoSeparator.offsetWidth) / 2 + 'px';
+};
+resizeHandler();
+window.addEventListener('resize', resizeHandler);
 
 // dynamic terminal
 let actions = ['brother', 'math', 'run', 'blog', 'code', 'build', 'cube', 'bowl', 'teach', 'learn', 'hack', 'eat', 'sleep', 'design'];

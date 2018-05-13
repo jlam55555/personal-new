@@ -57,7 +57,7 @@
   overflow-x: auto;
 }
 .mobile-scroll > :first-child, .mobile-scroll > :last-child {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .project-card {
