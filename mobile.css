@@ -267,7 +267,20 @@ p, li {
 }
 
 .video-separator {
-  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
   min-width: 100%;
   min-height: 100%;
+}
+
+.jumbotron, .image-separator {
+  position: relative;
+  background-color: white;
+  z-index: 1;
+}
+
+.image-separator.placeholder {
+  background-color: transparent;
 }
