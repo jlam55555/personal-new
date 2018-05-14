@@ -1,3 +1,6 @@
+.image-separator, .video-placeholder {
+  background-attachment: fixed;
+}
 #codeVisual {
   background-color: tan;
   flex: 1 0 0;

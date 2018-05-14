@@ -16,12 +16,6 @@ let resizeHandler = () => {
   if(oldWidth !== window.innerWidth) {
     oldWidth = window.innerWidth;
     [].forEach.call(imageSeparators, imageSeparator => {
-//      // mobile
-//      if(window.innerWidth < 750 || window.innerHeight < 700)
-//        imageSeparator.style.backgroundSize = `auto ${window.innerHeight}px`;
-//      // desktop
-//      else
-//        imageSeparator.style.backgroundSize = `${window.innerWidth}px auto`;
       imageSeparator.style.height = window.innerHeight + 'px';
     });
     videoPlaceholder.style.height = window.innerHeight + 'px';
