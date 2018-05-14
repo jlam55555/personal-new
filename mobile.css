@@ -168,6 +168,16 @@ th {
 #mobile-title {
   margin-bottom: 0;
   text-align: center;
+  flex: 1 0 0;
+}
+#dropdown-button {
+  border: none;
+  box-shadow: 0 0 1px 0 black;
+  border-radius: 0.125em;
+  transition: 0.2s box-shadow;
+}
+#dropdown-button:hover {
+  box-shadow: 0 0 1px 0 lightgrey;
 }
 #nav-bar a {
   color: black;
