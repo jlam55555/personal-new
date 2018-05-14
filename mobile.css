@@ -155,12 +155,19 @@ th {
 }
 
 #nav-bar {
-  text-align: right;
   padding: 1em;
   width: 100%;
   position: fixed;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.75);
+}
+#nav-bar .mobile, #nav-bar .desktop {
+  display: flex;
+  flex-direction: row;
+}
+#mobile-title {
+  margin-bottom: 0;
+  text-align: center;
 }
 #nav-bar a {
   color: black;
@@ -265,4 +272,8 @@ p, li {
 }
 .mobile-scroll:not(#technologies) > :last-child {
   margin-right: 10%;
+}
+
+.desktop {
+  display: none;
 }
