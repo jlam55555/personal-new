@@ -72,8 +72,8 @@
 }
 
 .desktop {
-  display: block;
+  display: block !important;
 }
 .mobile {
-  display: none;
+  display: none !important;
 }
