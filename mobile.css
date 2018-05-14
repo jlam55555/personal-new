@@ -175,9 +175,16 @@ th {
   box-shadow: 0 0 1px 0 black;
   border-radius: 0.125em;
   transition: 0.2s box-shadow;
+  background-color: transparent;
 }
 #dropdown-button:hover {
   box-shadow: 0 0 1px 0 lightgrey;
+}
+#dropdown {
+  position: fixed;
+  z-index: 2;
+  top: 3em;
+  background-color: lightgrey;
 }
 #nav-bar a {
   color: black;
