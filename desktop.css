@@ -66,3 +66,14 @@
 .project-card {
   flex: 0 0 33%;
 }
+
+#nav-bar .desktop {
+  justify-content: flex-end;
+}
+
+.desktop {
+  display: block;
+}
+.mobile {
+  display: none;
+}
