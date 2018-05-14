@@ -252,11 +252,6 @@ p, li {
   background-color: transparent;
 }
 
-
-.desktop {
-  display: none;
-}
-
 .mobile-scroll {
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -275,5 +270,5 @@ p, li {
 }
 
 .desktop {
-  display: none;
+  display: none !important;
 }
