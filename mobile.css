@@ -27,11 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .image-separator, .video-placeholder {
   display: block;
-  background-color: darkgrey;
   width: 100%;
   background-repeat: no-repeat;
   background-color: aqua;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-size: cover;
 }
