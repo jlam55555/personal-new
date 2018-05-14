@@ -190,9 +190,10 @@ th {
   flex-direction: column;
   display: flex;
   height: 0;
+  overflow: hidden;
 }
 #dropdown.show {
-  height: auto;
+  height: 9em;
 }
 #dropdown > a {
   padding: 0.5em;
