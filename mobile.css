@@ -173,12 +173,13 @@ th {
 }
 #dropdown-button {
   border: none;
+  outline: none;
   box-shadow: 0 0 1px 0 black;
   border-radius: 0.125em;
   transition: 0.2s box-shadow;
   background-color: transparent;
 }
-#dropdown-button:hover {
+#dropdown-button:active, #dropdown-button:hover {
   box-shadow: 0 0 1px 0 lightgrey;
 }
 #dropdown {
@@ -191,6 +192,7 @@ th {
   display: flex;
   height: 0;
   overflow: hidden;
+  transition: 0.2s height;
 }
 #dropdown.show {
   height: 9em;
