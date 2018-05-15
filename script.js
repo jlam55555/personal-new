@@ -1,9 +1,10 @@
 // images for image separators
 let imageSeparators = document.querySelectorAll('.image-separator');
-[].forEach.call(imageSeparators, imageSeparator => {
-  imageSeparator.style.backgroundImage = `url('${imageSeparator.dataset.src}')`;
-});
+Array.from(imageSeparators).forEach(imageSeparator => imageSeparator.style.backgroundImage = `url('${imageSeparator.dataset.src}')`);
 
+// lazy load images
+let images = document.querySelectorAll('img');
+Array.from(images).forEach(image => image.src = image.dataset.src);
 
 // set size of first jumbotron to window height (and resize when window resized)
 // resize image separators
@@ -11,21 +12,37 @@ let firstJumbotron = document.querySelector('#main-jumbotron');
 let videoSeparator = document.querySelector('.video-separator');
 let videoPlaceholder = document.querySelector('.video-placeholder');
 let oldWidth = 0;
+let videoAspectRatio = 1;
 let resizeHandler = () => {
-  firstJumbotron.style.height = window.innerHeight + 'px';
+  firstJumbotron.style.height = window.visualViewport.height + 'px';
   // prevent constant refreshing on mobile on vertical resize
-  if(oldWidth !== window.innerWidth) {
-    oldWidth = window.innerWidth;
+  if(oldWidth !== window.visualViewport.width) {
+    oldWidth = window.visualViewport.width;
     [].forEach.call(imageSeparators, imageSeparator => {
-      imageSeparator.style.height = window.innerHeight + 'px';
+      imageSeparator.style.height = window.visualViewport.height + 'px';
     });
-    videoPlaceholder.style.height = videoSeparator.style.minHeight = window.innerHeight + 'px';
-    videoSeparator.style.minWidth = window.innerWidth + 'px';
-    videoSeparator.style.marginLeft = ((window.innerWidth - videoSeparator.offsetWidth) / 2) + 'px';
+    let windowAspectRatio = window.visualViewport.width / window.visualViewport.height;
+    // too narrow / tall
+    if(videoAspectRatio < windowAspectRatio) {
+      videoSeparator.style.width = '100%';
+      videoSeparator.style.height = 'auto';
+      videoSeparator.style.marginLeft = '0';
+    }
+    // too wide
+    else {
+      videoSeparator.style.height = window.visualViewport.height + 'px';
+      videoSeparator.style.width = 'auto';
+      videoSeparator.style.marginLeft = ((window.visualViewport.width - videoSeparator.offsetWidth) / 2) + 'px';
+    }
+    videoPlaceholder.style.height = videoSeparator.offsetHeight + 'px';
   }
 };
 resizeHandler();
 window.addEventListener('resize', resizeHandler);
+videoSeparator.addEventListener('loadedmetadata', () => {
+  videoAspectRatio = videoSeparator.videoWidth / videoSeparator.videoHeight;
+  resizeHandler();
+});
 
 // dynamic terminal
 let actions = ['brother', 'math', 'run', 'blog', 'code', 'build', 'cube', 'bowl', 'teach', 'learn', 'hack', 'eat', 'sleep', 'design'];

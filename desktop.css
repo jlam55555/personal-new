@@ -1,5 +1,6 @@
 .image-separator, .video-placeholder {
   background-attachment: fixed;
+  display: block;
 }
 #codeVisual {
   background-color: tan;
@@ -69,6 +70,13 @@
 
 #nav-bar .desktop {
   justify-content: flex-end;
+}
+
+.video-separator {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 .desktop {

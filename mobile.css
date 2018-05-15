@@ -2,6 +2,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body {
   font-size: 16px;
@@ -119,6 +120,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 10em;
   display: block;
   margin: 1em auto;
+  background-color: white;
+  border-radius: 1em;
 }
 .project-card .card-body {
   padding: 1em;
@@ -128,6 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 1em 0;
 }
 
 table {
@@ -159,7 +163,7 @@ th {
   width: 100%;
   position: fixed;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 #nav-bar .mobile, #nav-bar .desktop {
   display: flex;
@@ -178,6 +182,7 @@ th {
   border-radius: 0.125em;
   transition: 0.2s box-shadow;
   background-color: transparent;
+  cursor: pointer;
 }
 #dropdown-button:active, #dropdown-button:hover {
   box-shadow: 0 0 1px 0 lightgrey;
@@ -186,7 +191,7 @@ th {
   position: fixed;
   z-index: 2;
   top: 3.5em;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
   flex-direction: column;
   display: flex;
@@ -267,12 +272,8 @@ p, li {
 }
 
 .video-separator {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  position: static;
+  width: 100%;
 }
 
 .jumbotron, .image-separator {
@@ -283,6 +284,7 @@ p, li {
 
 .video-placeholder {
   background-color: transparent;
+  display: none;
 }
 
 .mobile-scroll {
