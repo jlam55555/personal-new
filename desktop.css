@@ -72,7 +72,7 @@
 }
 
 .desktop {
-  display: block !important;
+  display: initial !important;
 }
 .mobile {
   display: none !important;
