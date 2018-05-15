@@ -59,7 +59,7 @@ let t = setInterval(() => {
 // dropdown button
 let dropdownButton = document.querySelector('#dropdown-button');
 let dropdown = document.querySelector('#dropdown-nav');
-let dropdownAs = document.querySelector('#dropdown-nav > a');
+let dropdownAs = document.querySelectorAll('#dropdown-nav > a');
 let toggleMenu = () => dropdown.classList.toggle('show');
 dropdownButton.addEventListener('click', toggleMenu);
 dropdownAs.addEventListener('click', toggleMenu);
