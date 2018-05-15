@@ -1,5 +1,5 @@
 alert('testing testing');
-
+/*
 
 // images for image separators
 let imageSeparators = document.querySelectorAll('.image-separator');
@@ -67,3 +67,4 @@ dropdownButton.addEventListener('click', () => {
   alert('test');
   dropdown.classList.toggle('show');
 });
+*/
