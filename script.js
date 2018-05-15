@@ -1,3 +1,6 @@
+alert('testing testing');
+
+
 // images for image separators
 let imageSeparators = document.querySelectorAll('.image-separator');
 [].forEach.call(imageSeparators, imageSeparator => {
