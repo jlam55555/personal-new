@@ -1,5 +1,4 @@
 alert('testing testing');
-/*
 
 // images for image separators
 let imageSeparators = document.querySelectorAll('.image-separator');
@@ -7,6 +6,7 @@ let imageSeparators = document.querySelectorAll('.image-separator');
   imageSeparator.style.backgroundImage = `url('${imageSeparator.dataset.src}')`;
 });
 
+/*
 // set size of first jumbotron to window height (and resize when window resized)
 // resize image separators
 let firstJumbotron = document.querySelector('#main-jumbotron');
