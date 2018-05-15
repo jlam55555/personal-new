@@ -1,5 +1,3 @@
-alert('testing testing');
-
 // images for image separators
 let imageSeparators = document.querySelectorAll('.image-separator');
 [].forEach.call(imageSeparators, imageSeparator => {
@@ -59,13 +57,8 @@ let t = setInterval(() => {
 }, 150);
 
 // dropdown button
-//let dropdownButton = document.querySelector('#dropdown-button');
+let dropdownButton = document.querySelector('#dropdown-button');
 let dropdown = document.querySelector('#dropdown-nav');
-/*
-dropdown.classList.add('show');
-alert(true);
 dropdownButton.addEventListener('click', () => {
-  alert('test');
   dropdown.classList.toggle('show');
 });
-*/
