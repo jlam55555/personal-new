@@ -59,8 +59,8 @@ let t = setInterval(() => {
 }, 150);
 
 // dropdown button
-let dropdownButton = document.querySelector('#dropdown-button');
-let dropdown = document.querySelector('#dropdown.mobile');
+//let dropdownButton = document.querySelector('#dropdown-button');
+let dropdown = document.getElementById('dropdown');
 /*
 dropdown.classList.add('show');
 alert(true);
