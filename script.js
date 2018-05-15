@@ -6,7 +6,7 @@ let imageSeparators = document.querySelectorAll('.image-separator');
   imageSeparator.style.backgroundImage = `url('${imageSeparator.dataset.src}')`;
 });
 
-/*
+
 // set size of first jumbotron to window height (and resize when window resized)
 // resize image separators
 let firstJumbotron = document.querySelector('#main-jumbotron');
@@ -29,6 +29,7 @@ let resizeHandler = () => {
 resizeHandler();
 window.addEventListener('resize', resizeHandler);
 
+/*
 // dynamic terminal
 let actions = ['brother', 'math', 'run', 'blog', 'code', 'build', 'cube', 'bowl', 'teach', 'learn', 'hack', 'eat', 'sleep', 'design'];
 let actionsIndex = Math.floor(Math.random() * actions.length);
