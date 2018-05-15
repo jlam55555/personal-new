@@ -59,6 +59,8 @@ let t = setInterval(() => {
 let dropdownButton = document.querySelector('#dropdown-button');
 let dropdown = document.querySelector('#dropdown');
 dropdown.classList.add('show');
+alert(true);
 dropdownButton.addEventListener('click', () => {
+  alert('test');
   dropdown.classList.toggle('show');
 });
