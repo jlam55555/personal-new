@@ -29,7 +29,6 @@ let resizeHandler = () => {
 resizeHandler();
 window.addEventListener('resize', resizeHandler);
 
-/*
 // dynamic terminal
 let actions = ['brother', 'math', 'run', 'blog', 'code', 'build', 'cube', 'bowl', 'teach', 'learn', 'hack', 'eat', 'sleep', 'design'];
 let actionsIndex = Math.floor(Math.random() * actions.length);
@@ -58,8 +57,8 @@ let t = setInterval(() => {
     }
   }
 }, 150);
-*/
 
+/*
 // dropdown button
 let dropdownButton = document.querySelector('#dropdown-button');
 let dropdown = document.querySelector('#dropdown');
@@ -69,3 +68,4 @@ dropdownButton.addEventListener('click', () => {
   alert('test');
   dropdown.classList.toggle('show');
 });
+*/
