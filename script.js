@@ -60,8 +60,7 @@ let t = setInterval(() => {
 
 // dropdown button
 let dropdownButton = document.querySelector('#dropdown-button');
-let dropdown = document.querySelector('#dropdown');
-//let dropdown = document.querySelector('#dropdown');
+let dropdown = document.querySelector('#dropdown.mobile');
 /*
 dropdown.classList.add('show');
 alert(true);
