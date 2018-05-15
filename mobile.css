@@ -182,7 +182,7 @@ th {
 #dropdown-button:active, #dropdown-button:hover {
   box-shadow: 0 0 1px 0 lightgrey;
 }
-#dropdown {
+#dropdown-nav {
   position: fixed;
   z-index: 2;
   top: 3.5em;
@@ -194,10 +194,10 @@ th {
   overflow: hidden;
   transition: 0.2s height;
 }
-#dropdown.show {
+#dropdown-nav.show {
   height: 9em;
 }
-#dropdown > a {
+#dropdown-nav > a {
   padding: 0.5em;
   text-align: center;
   text-decoration: none;
