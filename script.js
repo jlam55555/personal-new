@@ -62,4 +62,4 @@ let dropdown = document.querySelector('#dropdown-nav');
 let dropdownAs = document.querySelectorAll('#dropdown-nav > a');
 let toggleMenu = () => dropdown.classList.toggle('show');
 dropdownButton.addEventListener('click', toggleMenu);
-dropdownAs.addEventListener('click', toggleMenu);
+Array.from(dropdownAs).forEach(dropdownA => dropdownA.addEventListener('click', toggleMenu));
