@@ -7,6 +7,7 @@ body, html {
 body {
   font-size: 16px;
   font-family: montserrat, sans-serif;
+  box-shadow: 0 0 10px 10px black;
 }
 
 /* generic style to mimic Bootstrap -- only use bottom margins */
@@ -21,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .jumbotron {
   min-height: 30em;
+  width: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -47,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2em;
   padding: 0.5em;
   font-size: 1.25em;
+  line-height: 1;
 }
 
 .container {
@@ -54,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 64em;
   padding: 1em;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .text-center {
@@ -125,13 +129,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .project-card .card-body {
   padding: 1em;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 1em 0;
 }
 
 table {
@@ -206,22 +203,17 @@ th {
   padding: 0.5em;
   text-align: center;
   text-decoration: none;
+  line-height: 1;
 }
 #nav-bar a {
   color: black;
   text-decoration: none;
-  padding: 0 0.5em 0.5em 0.5em;
-}
-#nav-bar a:hover {
-  border-bottom: 5px solid lightgrey;
+  padding: 0.5em;
+  margin-bottom: 5px;
 }
 
 #main-jumbotron {
   justify-content: center;
-}
-
-#copyright-notice {
-  margin-top: auto;
 }
 
 hr {
@@ -243,8 +235,8 @@ a:hover, a:focus {
 }
 
 .technology-card {
-  flex: 0 0 33%;
-  padding: 1em;
+  margin: 0 0.5em 0.5em 0;
+  display: inline-block;
 }
 
 .technology-card > .card {
@@ -255,19 +247,14 @@ a:hover, a:focus {
 }
 
 .technology-card .card-header {
-  font-size: 2em;
   padding: 0.5em;
 }
 
 .technology-card .card-body {
-  padding: 1.25em;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  padding: 0.5em;
 }
 
-p, li {
+p, li, div, h1, h2, h3, h4, h5 {
   line-height: 1.5;
 }
 
@@ -287,10 +274,6 @@ p, li {
   display: none;
 }
 
-.mobile-scroll {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
 .mobile-scroll::after {
   height: 0;
   width: 0;
@@ -306,4 +289,404 @@ p, li {
 
 .desktop {
   display: none !important;
+}
+
+#projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 100%;
+  position: relative;
+  transition: background-size 0.1s;
+  text-decoration: none;
+}
+.project::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 0;
+  opacity: 0.3;
+  transition: opacity 0.1s;
+}
+
+.project-info {
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15em;
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+}
+
+.project-logo {
+  margin-bottom: 1em;
+  width: 5em;
+  border-radius: 0.5em;
+}
+
+
+.mini-project {
+  width: 100%;
+  height: 17em;
+}
+.mini-project > .project-info {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.mini-project .project-title {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+}
+
+/* project carousel */
+#projects {
+  padding: 0;
+}
+#project-lightbox {
+  max-width: 100%;
+  padding: 0;
+}
+#project-help {
+	line-height: 1;
+	background-color: white;
+	padding: 0.25em;
+	border-radius: 1em;
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	opacity: 0.75;
+	cursor: pointer;
+	box-shadow: 0 0 1px 0 darkslategrey;
+	transition: opacity 0.2s;
+}
+#project-help-text {
+	display: none;
+	line-height: 1;
+}
+#project-help.expanded {
+	border-radius: 0.25em;
+	max-width: calc(100% - 1em);
+}
+#project-help.expanded > #project-help-text {
+	display: inline;
+}
+#project-help:hover {
+	opacity: 1;
+}
+#project-scroller {
+  background-position: 0 0, center center !important;
+  background-size: auto, cover !important;
+
+  width: 100%;
+  max-width: 100%;
+	height: calc(2em + 130px);
+  overflow-x: scroll;
+  white-space: nowrap;
+  position: relative;
+  padding: 1em calc(50% - 65px);
+
+  /* hide scrollbar */
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+#project-scroller::-webkit-scrollbar {
+	display: none;
+}
+
+#project-scroller.snappy {
+  scroll-snap-type: x mandatory; /* Chrome Canary */  
+  scroll-snap-type: mandatory; /* Firefox */  
+  scroll-snap-points-x: repeat(130px);
+  -ms-scroll-snap-type: mandatory; /* IE/Edge */  
+  -webkit-scroll-snap-type: mandatory; /* Safari */  
+  -webkit-scroll-snap-destination: 0% 50%;  
+  -webkit-overflow-scrolling: touch; /* important for iOS */ 
+}
+#project-scroller::-webkit-scrollbar {
+  display: none;
+}
+.project-icon {
+  display: inline-flex !important;
+  width: 130px;
+  height: 130px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+
+  scroll-snap-align: center; /* latest (Chrome 69+) */  
+  scroll-snap-coordinate: 0% 50%; /* older (Firefox/IE) */  
+  -webkit-scroll-snap-coordinate: 0% 50%; /* older (Safari) */ 
+}
+.project-icon > img, .project-icon > .image-text {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 0 darkgrey;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-icon > .image-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(45deg, orange, green);
+}
+.project-icon > .image-text.large-text {
+  font-size: 20px;
+}
+.project-icon.centered > img, .project-icon.centered > .image-text {
+  transform: scale(1.5, 1.5);
+  box-shadow: 0 0 25px 1px grey;
+}
+#scroll-left, #scroll-right {
+  display: none;
+}
+#project-active-container {
+	color: grey;
+}
+#project-box {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+#project-box #project-title {
+  margin-bottom: 0;
+  display: inline-block;
+}
+#project-box > #project-active {
+  color: lightgrey;
+}
+#project-box > #project-description {
+}
+#project-box > #project-links {
+}
+#project-box a {
+  color: inherit !important;
+}
+#project-box > #project-stack > .stack-card {
+  display: inline-block;
+  color: black;
+  background-color: white;
+  box-shadow: 0 0 1px 0 white;
+  padding: 5px;
+  margin: 0.25em;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* contact section */
+#contact {
+  min-height: auto;
+}
+.contact-method.card {
+  transition: box-shadow 0.2s;
+  display: inline-block;
+  margin: 0 1em 1em 0;
+}
+.contact-method.card:hover {
+  box-shadow: 0 0 5px 0 darkslategrey;
+}
+.contact-method.card > .card-header, .contact-method.card > .card-body {
+  padding: 1em;
+}
+.contact-method.card .secondary {
+  color: darkgrey;
+  font-size: smaller;
+}
+
+/* about timeline */
+#about-whoami {
+  padding: 0.5em;
+  display: inline-block;
+  background-color: darkslategrey;
+  color: white;
+  border-radius: 0.25em;
+  position: absolute;
+  left: 40%;
+  top: 70%;
+  transform: skewY(30deg) rotate(-60deg);
+  visibility: visible;
+  z-index: 2;
+}
+#about-whoami::before {
+  content: '~';
+  color: skyblue;
+}
+#about-portrait {
+  width: 18em;
+  margin: 0 auto;
+  padding-bottom: calc(18em * 1.15470053837925152902);
+  transform: rotate(60deg) skewY(-30deg);
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+  margin-bottom: 2em;
+}
+#about-portrait-hexagon {
+  transform: skewY(30deg) rotate(-60deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+
+  background-image: url(./assets/jon-portrait.jpg);
+  background-size: cover;
+}
+#timeline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0.5em;
+  box-shadow: 0 0 1px 0 darkslategrey;
+  
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory; /* Chrome Canary */  
+  scroll-snap-type: mandatory; /* Firefox */  
+  scroll-snap-points-x: repeat(100%);
+  -ms-scroll-snap-type: mandatory; /* IE/Edge */  
+  -webkit-scroll-snap-type: mandatory; /* Safari */  
+  -webkit-scroll-snap-destination: 0% 50%;  
+  -webkit-overflow-scrolling: touch; /* important for iOS */ 
+}
+/* this is to create appropriate padding */
+#timeline::after {
+  content: '';
+  display: block;
+  flex: 0 0 1px;
+  width: 1px;
+  height: 1px;
+}
+.timeline-year {
+  flex: 0 0 calc(100%);
+  margin: 0.5em;
+
+  scroll-snap-align: center; /* latest (Chrome 69+) */  
+  scroll-snap-coordinate: 0% 50%; /* older (Firefox/IE) */  
+  -webkit-scroll-snap-coordinate: 0% 50%; /* older (Safari) */ 
+}
+.timeline-year .timeline-text::after {
+  content: 'Swipe left or right to continue reading.';
+  display: block;
+  color: grey;
+  font-size: smaller;
+  margin-top: 1em;
+}
+.timeline-year:first-child .timeline-text::after {
+  content: 'Swipe left to continue reading.';
+}
+.timeline-year:last-child .timeline-text::after {
+  content: 'Swipe right to go back.';
+}
+.timeline-header, .timeline-text {
+  display: inline;
+}
+.timeline-header {
+  line-height: 1;
+  margin-right: 0.5em;
+}
+.timeline-image {
+  max-width: 100%;
+  display: block;
+  margin-top: 2em;
+}
+
+/* image grid */
+/* tips from https://www.codesmite.com/article/how-to-create-pure-css-hexagonal-grids */
+#image-grid {
+  width: 120%;
+  margin: 0 -20%;
+  position: relative;
+}
+.image-hexagon-container {
+  width: calc(100% / 3);
+  padding-bottom: calc(100% / 3 * 1.15470053837925152902);
+  transform: rotate(60deg) skewY(-30deg);
+  float: left;
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+}
+.image-hexagon {
+  transform: skewY(30deg) rotate(-60deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  border: 5px solid white;
+
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+
+  /* tip from https://stackoverflow.com/a/3461770/2397327 to remove flicker */
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+/* active and focus for mobile -- not working for mobile */
+.image-hexagon:hover, .image-hexagon:active, .image-hexagon:focus {
+  filter: grayscale(0);
+}
+.image-hexagon-container:nth-child(6n+4),
+.image-hexagon-container:nth-child(6n+5),
+.image-hexagon-container:nth-child(6n+6) {
+  margin-top: calc(-100% / 3 * 0.28867513459481288225 + 10px);
+  margin-bottom: calc(-100% / 3 * 0.28867513459481288225 + 10px);
+  transform: translateX(50%) rotate(60deg) skewY(-30deg);
+}
+.image-hexagon-container:nth-last-child(1),
+.image-hexagon-container:nth-last-child(2),
+.image-hexagon-container:nth-last-child(3) {
+  margin-bottom: calc(-100% / 3 * 0.28867513459481288225);
+}
+
+/* footer */
+#footer-jumbotron {
+  clear: both;
+  min-height: auto;
+  padding: 0;
+  margin: 0 0 10em 0;
+}
+#footer-jumbotron > .container > * {
+  padding: 1em 0;
 }

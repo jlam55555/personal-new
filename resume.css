@@ -1,0 +1,108 @@
+/* general body, html styles */
+* {
+  margin-top: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  padding: 0.9in;
+  margin: 0.5in auto;
+  width: 8.5in;
+  box-shadow: 0 0 10px 1px lightgrey;
+}
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'pt serif', serif;
+  font-size: 0.167in;
+}
+html {
+  background-color: whitesmoke;
+}
+
+/* specific elements */
+.float-right {
+  float: right;
+  margin: 0 0 0 1em;
+  font-size: smaller;
+  color: darkslategrey;
+}
+#printButton {
+  position: fixed;
+  margin: 1em;
+  padding: 0.5em;
+  border: 1px solid lightgrey;
+  background-color: white;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+#printButton:hover {
+  text-decoration: underline;
+}
+
+/* tags */
+a {
+  color: black;
+}
+h1 {
+  font-size: 1.25em;
+  margin: 0;
+}
+h3 {
+  font-size: 1em;
+  margin: 0;
+}
+hr {
+  margin: 2em auto;
+  border: none;
+  background-color: lightgrey;
+  width: 90%;
+  height: 1px;
+}
+p {
+  margin: 0;
+}
+ul {
+  padding-left: 1em;
+}
+body > ul > li {
+  margin: 0.5em;
+}
+body > ul > li > p:nth-child(2) {
+  margin-bottom: 0.25em;
+}
+body > ul > li > p:nth-child(3) {
+  margin-left: 2em;
+  font-size: smaller;
+  color: #555;
+}
+ul > li > ul > li {
+  font-size: smaller;
+  color: #555;
+}
+
+/* print styles */
+@media print {
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  body {
+    padding: 0.25in 0.25in 0 0.25in;
+    margin: 0;
+    box-shadow: none;
+  }
+  hr {
+    margin: 1.5em 0 0.25em 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+  }
+  html {
+    background-color: transparent;
+  }
+  #printButton {
+    display: none;
+  }
+}

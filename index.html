@@ -4,22 +4,28 @@
     <title>Jonathan Lam</title>
     <meta charset='utf-8'>
     <meta name='author' content='Jonathan Lam <jonathanlamdev@gmail.com> (http://www.jonathanlam.tech)'>
-    <meta name='description' content='The personal website of Jonathan Lam'>
+    <meta name='description' content='Meet Jonathan Lam | Software Developer'>
     <meta name='keywords' content='jonathan lam, cooper union, programmer, freelancer'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='./mobile.css'>
-    <link rel='stylesheet' href='./desktop.css' media='screen and (min-width: 750px) and (min-height: 500px)'>
+    <meta property='og:title' content='Meet Jonathan Lam | Software Developer'>
+    <meta property='og:image' content='http://www.jonlamdev.com/assets/website-screenshot.png'>
+    <meta property='og:description' content='Jonathan Lam is a passionate software developer and programmer. See some of his projects and learn more about him.'>
+    <meta property='og:url' content='http://www.jonlamdev.com'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css' integrity='sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp' crossorigin='anonymous'>
+    <link rel='stylesheet' href='./mobile.css'>
+    <link rel='stylesheet' href='./desktop.css' media='screen and (min-width: 64em) and (min-height: 600px)'>
+    <link rel='icon' href='./favicon.png'>
     <script src='./script.js' defer></script>
   </head>
   <body>
     <nav id='nav-bar'>
       <div class='flex desktop'>
-        <a href='#about'>About</a>
-        <a href='#experience'>Experience</a>
-        <a href='#contact'>Contact</a>
-        <a href='./resume'>Résumé</a>
+        <a title='Home'>Home</a>
+        <a title='About'>About</a>
+        <a title='Projects'>Projects</a>
+        <a title='Technologies'>Technologies</a>
+        <a title='Contact'>Contact</a>
       </div>
       <div class='mobile'>
         <button id='dropdown-button'><i class='fas fa-bars'></i></button>
@@ -28,9 +34,9 @@
     </nav>
     <div class='mobile' id='dropdown-nav'>
       <a href='#about'>About</a>
-      <a href='#experience'>Experience</a>
+      <a href='#projects'>Projects</a>
       <a href='#contact'>Contact</a>
-      <a href='./resume'>Résumé</a>
+      <a href='./resume.pdf' target='_blank'>Résumé</a>
     </div>
     <div class='jumbotron' id='main-jumbotron'>
       <div class='container'>
@@ -38,19 +44,22 @@
         <h3 class='text-center'>
           Nice to meet you.
           <span class='desktop'>
-            <a href='./resume'>Résumé</a>.
+            <a href='./resume.pdf' target='_blank'>Résumé</a>.
+            <a href='#projects'>Projects</a>.
             <a href='#contact'>Contact</a>.
           </span>
           <div class='mobile'>
-            <a href='./resume'>Résumé</a>
+            <a href='./resume.pdf' target='_blank'>Résumé</a>
+            <a href='#projects'>Projects</a>.
             <a href='#contact'>Contact</a>
           </div>
         </h3>
       </div>
       <div id='codeVisual'>
-        <div class='codeVisualButton' id='button1'></div>
-        <div class='codeVisualButton' id='button2'></div>
-        <div class='codeVisualButton' id='button3'></div>
+        <div id='codeVisualTitle' class='desktop code'><i class='fas fa-terminal'></i></div>
+        <div class='codeVisualButton' id='button1'><i class='fas fa-times desktop'></i></div>
+        <div class='codeVisualButton' id='button2'><i class='fas fa-arrows-alt-h desktop'></i></div>
+        <div class='codeVisualButton' id='button3'><i class='fas fa-window-minimize desktop'></i></div>
         <div id='codeVisualTerminal'>
           <div class='code text-light' id='codeVisualBash'>
             <span class='text-green'>jon@life:</span>
@@ -62,84 +71,116 @@
         </div>
       </div>
     </div>
-    <div class='image-separator' data-src='./assets/oculus.jpg'></div>
     <div class='jumbotron' id='about'>
       <div class='container'>
-        <h1>About</h1>
-        <p>I'm currently a senior in high school, entering <a href='http://cooper.edu/welcome' target='_blank'>the Cooper Union</a> as a freshman next year. While I will be studying electrical engineering, my <mark>passion is creating applications that will ease the life of workers, students, and other programmers</mark>. I hope that a college education in EE will allow me to get a fundamental idea of how computers work, while learning the theoretical side of computer science on my own.</p>
-        <p>I enjoy spending free time bowling, Rubik's cubing, doing origami, listening to Studio Ghibli music, answering questions on <a href='https://www.stackoverflow.com/users/2397327/jonathan-lam' target='_blank'>Stack Overflow</a>, trying to solve problems on Project Euler or <a href='https://www.codewars.com/users/jlam55555' target='_blank'>Code Wars</a>, and learning new languages. I also maintain a <a href='http://eis.jonathanlam.tech' target='_blank'>literary and programming blog</a>.</p>
-        <hr>
-        <h3>Programming Timeline</h3>
-        <ul>
-          <li>LIHacks 2016: Winner of the Most Entreneurial Prize for <a href='http://www.jonathanlam.tech/ringtune-website' target='_blank'>RingTune</a>.</li>
-          <li>Recipient of the University of Rochester Xerox Award for Innovation and Information Technology.</li>
-          <li>MoMath Hackathon 2017: Winner of the Dynamic Wall Challenge, finalist for the Math Square Challenge, and recipient of the Wolfram Award, for <a href='https://www.github.com/poobaloofa/howitfeelstochew5gum' target='_blank'>assorted projects</a>.</li>
-          <li>StuyHacks MLH LHD 2017: Best Game for <a href='http://www.fruitsensei.tech' target='_blank'>FruitSensei</a>.</li>
-          <li>Recipient of the Weller Foundation Computer Science/Technology Scholarship.</li>
-          <li>Safe Rides of Redding and Easton officially supports the website <a href='https://www.saferideser9.org' target='_blank'>saferideser9.org</a> for facilitation of the service.</li>
-        </ul>
-      </div>
-    </div>
-    <div class='image-separator' data-src='./assets/workspace.jpg'></div>
-    <div class='jumbotron' id='experience'>
-      <div class='container'>
-        <h1>Experience</h1>
-        <h3>Projects</h3>
-        <div class='row mobile-scroll'>
-          <div class='project-card'>
-            <a class='card' href='http://eis.jonathanlam.tech' target='_blank'>
-              <div class='card-header'>
-                <img data-src='./assets/eis.png'>
+
+        <div id='about-portrait'>
+          <code id='about-whoami'>$ whoami<br>jon</code>
+          <div id='about-portrait-hexagon'></div>
+        </div>
+        <p>I'm an undergraduate student studying electrical engineering at the <a href='https://cooper.edu/welcome' target='_blank'>Cooper Union for the Advancement of Science and Art</a> and passionate in software engineering. I've worked on software solutions have helped my community and myself for all sorts of everyday needs, from analyzing bowling scores to improving English skills. Continuing to provide these kinds of solutions is my goal, packaged in self-documenting, future-proof code and delivered in a minimalistic client interface.</p>
+
+        <p>By day, I study electrical engineering. By night, I'm a coding ninja/ping pong-er/Rubik's speedcuber/left-hand Dvorak typer.</p>
+
+        <p>The journey is more important than the destination. Would you like to hear a story?</p>
+
+        <div id='timeline'>
+          <div class='timeline-year'>
+            <img class='timeline-image' data-src='./assets/timeline-2011.png'>
+            <h1 class='timeline-header'>2011</h1>
+            <div class='timeline-text'>
+              <span>My mom brought home two books she found at an old book sale. I had recently fallen out of a car phase, so I was down in the dumps and didn't have much to interest me. I tried reading the Java one&mdash; the name was cooler&mdash; but it made no sense. I asked my dad about the HTML one, and he showed me how to input an example on Notepad and see the output on Internet Explorer. I had complete control over the webpage. I was enthralled.</span>
+              <div class='desktop'>
+                <button class='timeline-button timeline-button-next'>Next</button>
               </div>
-              <div class='text-center card-body'>Everything is Sheep</div>
-            </a>
+            </div>
           </div>
-          <div class='project-card'>
-            <a class='card' href='https://www.saferideser9.org' target='_blank'>
-              <div class='card-header'>
-                <img data-src='./assets/srre.png'>
+          <div class='timeline-year'>
+            <img class='timeline-image' data-src='./assets/timeline-2014.png'>
+            <h1 class='timeline-header'>2014</h1>
+            <div class='timeline-text'>
+              <span>By this time, I had experimented with a little bit of HTML (4), Java, C++, and PHP, solving little math puzzles and discovering the syntax. Our final project for <a href='https://www.pltw.org/' target='_blank'>PLTW</a> was open-ended, so I decided to demonstrate my programming skills. I learnt some JavaScript and CSS and threw together some calculator interfaces, and presented my knowledge of how these languages (along with HTML and PHP) could be integrated into a single, useful application.</span>
+              <div class='desktop'>
+                <button class='timeline-button timeline-button-previous'>Previous</button>
+                <button class='timeline-button timeline-button-next'>Next</button>
               </div>
-              <div class='text-center card-body'>Safe Rides of ER9</div>
-            </a>
+            </div>
           </div>
-          <div class='project-card'>
-            <a class='card' href='http://www.thehomeworklife.co.nf' target='_blank'>
-              <div class='card-header'>
-                <img data-src='./assets/thl.png'>
+          <div class='timeline-year'>
+            <img class='timeline-image' data-src='./assets/timeline-2016.png'>
+            <h1 class='timeline-header'>2016</h1>
+            <div class='timeline-text'>
+              <span>I spoke with my English teacher in the tenth grade because I couldn't speak during any of the daily class discussions. I was afraid to get my incomplete ideas out. She suggested that I practice (<em>practice English?</em>, I wondered) by writing or speaking on any whimsical thought. So I began a blog and posted many posts, many days in a row. I got so involved in the blog that I spent many days in a row writing posts and the blog became the hub for my programming projects as well. I hosted web programming projects, such as Project Euler solutions or JavaScript games, on the blog, and wrote blog posts about them.</span>
+              <div class='desktop'>
+                <button class='timeline-button timeline-button-previous'>Previous</button>
+                <button class='timeline-button timeline-button-next'>Next</button>
               </div>
-              <div class='text-center card-body'>The Homework Life</div>
-            </a>
+            </div>
           </div>
-          <div class='project-card'>
-            <a class='card' href='http://www.fruitsensei.tech' target='_blank'>
-              <div class='card-header'>
-                <img data-src='./assets/fs.png'>
+          <div class='timeline-year'>
+            <img class='timeline-image' data-src='./assets/timeline-2017.png'>
+            <h1 class='timeline-header'>2017</h1>
+            <div class='timeline-text'>
+              <span>The website for our local bowling center was archaic, so I built a new version for them. Our bowling team didn't have any established method of digital data collection or analysis, so I devised a system for storing data, a heuristic equation to choose the next week's lineup, and built a website to display statistics. For the new Safe Rides service at our school, I built a web-app to streamline the (then pen-and-paper method) for volunteers and clients alike. My first blog was also growing a little outdated, so I built a new blog with a JS stack.</span>
+              <div class='desktop'>
+                <button class='timeline-button timeline-button-previous'>Previous</button>
+                <button class='timeline-button timeline-button-next'>Next</button>
               </div>
-              <div class='text-center card-body'>Fruit Sensei</div>
-            </a>
+            </div>
           </div>
-          <div class='project-card'>
-            <a class='card' href='http://www.jonathanlam.tech/ringtune-website' target='_blank'>
-              <div class='card-header'>
-                <img data-src='./assets/rt.png'>
+          <div class='timeline-year'>
+            <img class='timeline-image' data-src='./assets/timeline-2018.png'>
+            <h1 class='timeline-header'>2018</h1>
+            <div class='timeline-text'>
+              <span>High school ended, so it was time to reach out. I met the great entrepreneur, Joshua Hirth, and worked with him to develop websites to promote his two innovative medical kits with websites. I attended four hackathons in the second half of the year. For the engineering design course, I helped develop an Android app to analyze a chemical glucose test strip, and designed a website to document the process.</span>
+              <div class='desktop'>
+                <button class='timeline-button timeline-button-previous'>Previous</button>
+                <button class='timeline-button timeline-button-next'>Next</button>
               </div>
-              <div class='text-center card-body'>RingTune</div>
-            </a>
+            </div>
           </div>
-          <div class='project-card'>
-            <a class='card' href='http://jbhsbowling.github.io' target='_blank'>
-              <div class='card-header'>
-                <img data-src='./assets/bb.png'>
+          <div class='timeline-year'>
+            <img class='timeline-image' data-src='./assets/timeline-2019.png'>
+            <h1 class='timeline-header'>2019</h1>
+            <div class='timeline-text'>
+              <span>2019 has just begun, and there's so much to do! I'm collaborating with our student banker to develop a new fusion website for all of the student-run websites at our university, including club funding, the bookstore, a student resource locator, and locker management. I hope to begin some work with machine learning, mobile app development, and security systems, and I have plans to touch up on a lot of old projects. Most recently, I've been looking for opportunities in employment or internship in the summer. Onwards!</span>
+              <div class='desktop'>
+                <button class='timeline-button timeline-button-previous'>Previous</button>
               </div>
-              <div class='text-center card-body'>Barlow Bowling</div>
-            </a>
+            </div>
           </div>
         </div>
-        <br>
-        <p class='text-center'>See more on my <a href='https://www.github.com/jlam55555/' target='_blank'>Github</a>.</p>
-        <hr>
-        <h3>Technologies</h3>
-        <div class='row mobile-scroll' id='technologies'>
+
+      </div>
+    </div>
+    <div class='jumbotron' id='projects'>
+
+      <div id='project-lightbox'>
+        <div class='snappy' id='project-scroller'></div>
+
+        <div id='project-help' title='Need help navigating this section?' class='unselectable'>
+          <i class='far fa-question-circle'></i>
+          <span id='project-help-text'>Here are some of my projects! If you're stuck, try swiping on the icons (for touchscreens), or using the arrow keys. Enjoy!</span>
+        </div>
+
+        <div id='project-box' class='container'>
+          <h1 id='project-title'></h1>
+          <div id='project-active-container'>
+            <button id='scroll-left' title='Pan left'>&#x2bc7;</button>
+            <span id='project-active'></span>
+            <button id='scroll-right' title='Pan right'>&#x2bc8;</button>
+          </div>
+          <p id='project-description'></p>
+          <p id='project-links'></p>
+          <div id='project-stack'></div>
+        </div>
+      </div>
+
+    </div>
+    <div class='jumbotron' id='technologies'>
+      <div class='container'>
+        <h3>Preferred Technologies</h3>
+        <div>
           <div class='technology-card'>
             <div class='card'>
               <div class='card-header'>
@@ -237,6 +278,8 @@
             </div>
           </div>
         </div>
+        <p></p>
+        <p>I have the most fun working with JavaScript and other C syntax-like languages (C, C++, Java, PHP), but I'm trying to expand my horizons. My goal for the near future is to learn about symbolic languages such as Lisp and their applications in AI, as well as <a href='https://consileon.pl/blog/cross-platform-mobile-apps-with-single-codebase/' target='_blank'>one-codebase-multiple-platform</a> technologies (e.g., Ionic, React Native, NativeScript) to speed up development for web and mobile. I also hope to learn Python and Perl, and get a deeper understanding of NoSQL (MongoDB, Cassandra) and SQL database technologies.</p>
         <hr>
         <h3>Preferences</h3>
         <div>
@@ -265,12 +308,16 @@
                 <td>JavaScript</td>
               </tr>
               <tr>
+                <td>JavaScript Framework</td>
+                <td>Angular 2+</td>
+              </tr>
+              <tr>
                 <td>Indenting</td>
                 <td>spaces (2)</td>
               </tr>
               <tr>
                 <td>Code Style</td>
-                <td><a href='https%3A%2F%2Fgithub.com%2Fmrdoob%2Fthree.js%2Fwiki%2FMr.doob%27s-Code-Style%25E2%2584%25A2' target='_blank'>Mr.doob</a></td>
+                <td><a href='https://github.com/mrdoob/three.js/wiki/Mr.doob%27s-Code-Style%E2%84%A2' target='_blank'>Mr.doob</a></td>
               </tr>
               <tr>
                 <td>Code Philosophy</td>
@@ -281,17 +328,58 @@
         </div>
       </div>
     </div>
-    <div class='video-placeholder'></div>
-    <video class='video-separator' autoplay loop poster='./assets/cube.jpg' muted>
-      <source src='./assets/cube.mp4' type='video/mp4' />
-    </video>
     <div class='jumbotron' id='contact'>
       <div class='container'>
-        <h1>Contact</h1>
-        <p>Interested in my work? Contact me at <a href='mailto:jonathanlamdev@gmail.com' target='_blank'>jonathanlamdev@gmail.com</a>.</p>
-        <p>Interested in hiring me? See my <a href='./resume' target='_blank'>résumé</a>.</p>
+        <p>Find anything interesting? It'd be great if you reached out!</p>
+
+        <div id='contact-methods'>
+          <a class='card contact-method' href='./resume.pdf' target='_blank'>
+            <div class='card-header'>
+              <i class='fas fa-fw fa-briefcase'></i>
+              <span>Résumé</span>
+            </div>
+            <div class='card-body secondary'>Professional tl;dr</div>
+          </a>
+          <a class='card contact-method' href='https://www.linkedin.com/jonlamdev' target='_blank'>
+            <div class='card-header'>
+              <i class='fab fa-fw fa-linkedin'></i>
+              <span>LinkedIn</span>
+            </div>
+            <div class='card-body secondary'>/in/jonlamdev</div>
+          </a>
+          <a class='card contact-method' href='mailto:jonlamdev@gmail.com' target='_blank'>
+            <div class='card-header'>
+              <i class='fas fa-fw fa-envelope'></i>
+              <span>Email</span>
+            </div>
+            <div class='card-body secondary'>jonlamdev at gmail dot com</div>
+          </a>
+          <a class='card contact-method' href='https://www.github.com/jlam55555' target='_blank'>
+            <div class='card-header'>
+              <i class='fab fa-fw fa-github'></i>
+              <span>GitHub</span>
+            </div>
+            <div class='card-body secondary'>@jlam55555</div>
+          </a>
+          <a class='card contact-method' href='https://stackoverflow.com/users/2397327/jonathan-lam' target='_blank'>
+            <div class='card-header'>
+              <i class='fab fa-fw fa-stack-overflow'></i>
+              <span>Stack Overflow</span>
+            </div>
+            <div class='card-body secondary'>Jonathan Lam</div>
+          </a>
+        </div>
       </div>
-      <small class='display-block text-secondary text-center' id='copyright-notice'>Copyright &copy; 2018 Jonathan Lam.</small>
+    </div>
+    <div id='image-grid'></div>
+    <div class='jumbotron' id='footer-jumbotron'>
+      <div class='container'>
+        <small class='display-block text-secondary text-center'>
+          <div>Problems viewing this site? Can you <a href='https://www.whatismybrowser.com/' target='_blank'>update to a more modern browser</a>?</div>
+          <div>If not, feel free to <a href='mailto:jonlamdev?subject=Website Problems' target='_blank'>email Jonathan Lam</a>.</div>
+        </small>
+        <small class='display-block text-secondary text-center' id='copyright-notice'>Copyright &copy; 2018 Jonathan Lam.</small>
+      </div>
     </div>
   </body>
 </html>
